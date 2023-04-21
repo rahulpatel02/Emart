@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.admin .card{
+	border:1px solid black;
+}
+.card:hover{
+	color:red;
+	background: #f2eeed;
+	cursor:pointer;
+}

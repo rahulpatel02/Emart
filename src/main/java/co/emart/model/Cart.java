@@ -3,7 +3,7 @@ package co.emart.model;
 public class Cart extends Product {
 	private int quantity;
 
-	public  Cart() {
+	public Cart() {
 
 	}
 

@@ -14,22 +14,21 @@ import jakarta.servlet.http.HttpSession;
 public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		try {
-			HttpSession hs=request.getSession();
-			if(hs.getAttribute("auth") !=null) {
+			HttpSession hs = request.getSession();
+			if (hs.getAttribute("auth") != null) {
 
 				hs.removeAttribute("auth");
 				response.sendRedirect("login.jsp");
-			}else {
+			} else {
 				response.sendRedirect("index.jsp");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
-
 
 }

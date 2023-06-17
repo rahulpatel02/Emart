@@ -3,8 +3,7 @@
 <%@page import="java.util.*"%>
 <%@page import="co.emart.connection.DbCon"%>
 <%@page import="co.emart.model.*"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <%
           HttpSession hs=request.getSession();
       User auth=(User)hs.getAttribute("auth");
@@ -14,7 +13,7 @@
         ProductDao pd=new ProductDao(DbCon.getConnetion());
         List<Product> products=null;
                      products=pd.getAllProducts();
-        
+         
         //Filter product category wise
       
         String categoryId=  request.getParameter("category");
@@ -95,12 +94,14 @@
 	   for(Product p:products){
 		   %>
 		   <div class="col-md-3">
-		   <div class="card my-3" style="width: 18rem;height:auto">
-		    <img src="images/product-image/<%= p.getImage() %>" class="card-img-top" style="max-height:400px; width:auto;"  alt="...">
+		   <div class="card my-3" style="width: 18rem;">
+		    <img src="images/product-image/<%= p.getImage() %>"  class="img-fluid" class="card-img-top" style="height:200px; max-width:100%;"  alt="...">
+		   
 		    <div class="card-body">
 		      <h5 class="card-title"><%= p.getName() %></h5>
 		      <h6 class="price">Price: $<%= p.getPrice() %></h6>
 		      <h6>Category:<%= p.getCategory() %></h6>
+		    
 		      <div class="mt-3 d-flex justify-content-between">
 		      <a href="add-to-cart?id=<%=p.getId() %>" class="btn btn-dark">Add to Cart</a>
 		       <a class="btn btn-primary" href="order-now?quantity=1&id=<%=p.getId()%>">Buy Now</a>
@@ -119,7 +120,7 @@
  </div>
 <%-- <% out.print(products.toString());//for Dibuging --%>
 <%--<% out.print(DbCon.getConnetion()); --%>
-		 
+		<script src="https://checkout.razorpay.com/v1/checkout.js"></script> 
 <%@ include file="include/footer.jsp" %>
 </body>
 </html>

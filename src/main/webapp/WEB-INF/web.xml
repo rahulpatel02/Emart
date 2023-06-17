@@ -119,4 +119,14 @@
     <servlet-name>AdminOprationServlet</servlet-name>
     <url-pattern>/admin-opration</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OrderCreateForPay</display-name>
+    <servlet-name>OrderCreateForPay</servlet-name>
+    <servlet-class>co.emart.servlet.OrderCreateForPay</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderCreateForPay</servlet-name>
+    <url-pattern>/ordercreateforpay</url-pattern>
+  </servlet-mapping>
 </web-app>

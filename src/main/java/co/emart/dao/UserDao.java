@@ -42,7 +42,7 @@ public class UserDao {
 
 	}
 
-	public boolean userReg(String fname, String lname, long phoneNo, String email, String password,String userType) {
+	public boolean userReg(String fname, String lname, long phoneNo, String email, String password, String userType) {
 		boolean flag = false;
 		try {
 			query = "INSERT INTO USERREG(USERID,FIRSTNAME,LASTNAME,PHONENO,EMAIL,PASSWORD,USERTYPE)VALUES(seq_person.nextval,?,?,?,?,?,?)";
@@ -62,7 +62,5 @@ public class UserDao {
 		return flag;
 
 	}
-
-
 
 }

@@ -9,20 +9,9 @@ public class User {
 	private int userCounts;
 	private int orederCount;
 
-
-
-
-
 	public User() {
 
 	}
-
-
-
-
-
-
-
 
 	public User(int id, String name, String email, String password, String userType) {
 		super();
@@ -77,12 +66,9 @@ public class User {
 		return orederCount;
 	}
 
-
-
 	public void setOrederCount(int orederCount) {
 		this.orederCount = orederCount;
 	}
-
 
 	public int getUserCounts() {
 		return userCounts;
@@ -91,12 +77,11 @@ public class User {
 	public void setUserCounts(int userCounts) {
 		this.userCounts = userCounts;
 	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", userType="
 				+ userType + "]";
 	}
-
-
 
 }

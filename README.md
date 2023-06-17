@@ -34,6 +34,7 @@ The application integrates with Razorpay's APIs and SDKs to securely process pay
 Admin Module:
 
 Admin Dashboard:
+
 We have created an admin dashboard with appropriate access controls and privileges. The dashboard provides an interface for the admin to manage various aspects of the e-commerce platform, including product management.
 
 Product Management:

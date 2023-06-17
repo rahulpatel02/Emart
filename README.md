@@ -30,3 +30,12 @@ Razorpay Payment Integration:
 We have integrated Razorpay as the payment gateway to facilitate secure transactions.
 Users can choose to pay using credit cards, debit cards, or UPI.
 The application integrates with Razorpay's APIs and SDKs to securely process payments and handle transaction details.
+
+Admin Module:
+
+Admin Dashboard:
+We have created an admin dashboard with appropriate access controls and privileges. The dashboard provides an interface for the admin to manage various aspects of the e-commerce platform, including product management.
+
+Product Management:
+
+Within the admin dashboard, the admin can access a product management section. This section allows the admin to add, edit, and delete products from the product catalog and view number of users and orders.
